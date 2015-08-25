@@ -1,0 +1,56 @@
+.box{
+	 background-image: url('../img/button_02.gif');
+	 width: 50px;
+	 height: 50px;
+	 position: absolute;
+	 top:40px;
+	 left:40px;
+
+
+}
+
+.box-btn{
+	 background-image: url('../img/button_02.gif');
+	 width: 50px;
+	 height: 50px;
+	 position: absolute;
+	 top:0px;
+	 left:0px;
+
+}
+
+.box.box-stroke{
+	 border: 5px solid white;
+
+}
+
+a.test {
+    font-weight: bold;
+}
+
+a, .prompts{
+	font-size: .5em;
+	font-family: "brandon-grotesque", Verdana;
+}
+
+#log{
+	font-size: .5em;
+	bottom:0px;
+	left:0px;
+	position:absolute;
+}
+
+/* div {
+    color: red;
+  }*/
+
+  .scene-2:option{
+  	font-size: .5em;
+	font-family: "brandon-grotesque", Verdana;
+	color: blue;
+  }
+
+  select{
+  	height: 200px;
+  }
+ 

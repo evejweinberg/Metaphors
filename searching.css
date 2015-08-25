@@ -1,0 +1,123 @@
+.hand{
+	height: 90%;
+	width: 90%;
+}
+
+.left-hand{
+	position: absolute;
+	left: -400px;
+	 -webkit-animation-name: left; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 2.5s; /* Chrome, Safari, Opera */
+    animation-name: left;
+    animation-duration: 2.5s;
+    animation-delay: 0s;
+     animation-iteration-count: 1;
+     animation-timing-function: ease-out;
+}
+
+.right-hand{
+	position: absolute;
+	left: 420px;
+ -webkit-animation-name: right; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 2.5s; /* Chrome, Safari, Opera */
+    animation-name: right;
+    animation-duration: 2.5s;
+    animation-delay: 0s;
+     animation-iteration-count: 1;
+     animation-timing-function: ease-out;
+}
+
+.handcontainer{
+	position: absolute;
+}
+
+.inspire-object{
+	 -webkit-animation-name: flyBy_scale; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 2.5s; /* Chrome, Safari, Opera */
+    animation-name: flyBy_scale;
+    animation-duration: 2.5s;
+    animation-delay: 0s;
+     animation-iteration-count: infinite;
+     animation-timing-function: ease-out;
+	opacity:0;
+	height:40%;
+	width: 40%;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+	position: absolute;
+}
+
+/*     -------------------ANIMATION PARAMETERS-------HANDS----------     */
+@-webkit-keyframes right {
+    0%   { left:0px; }
+
+    85%  { left:440px; }
+    100% { left:420px; }
+}
+
+/* Standard syntax */
+@keyframes right {
+    0%   { left:0px; }
+
+    85%  { left:440px; }
+    100% { left:420px; }
+}
+
+@-webkit-keyframes left {
+    0%   { left:0px; }
+
+    85%  { left:-420px; }
+    100% { left:-400px; }
+}
+
+/* Standard syntax */
+@keyframes left {
+    0%   { left:0px; }
+
+    85%  { left:-420px; }
+    100% { left:-400px; }
+}
+
+
+/*     -------------------ANIMATION PARAMETERS-------OBJECTS----------     */
+
+
+@-webkit-keyframes flyBy_scale {
+  0% { 
+        -webkit-transform-origin: center center; 
+        -webkit-transform: scaleX(2) scaleY(2) rotate(-20deg);
+        -webkit-filter: blur(20px);
+        
+        opacity:0
+        
+        ;
+        
+
+    }
+    10% {
+    	opacity:1;
+    	
+    }
+    20% {
+    	
+    	-webkit-filter: blur(0px);
+    }
+    70% {
+    	
+    	-webkit-filter: blur(0px);
+    }
+    90% {
+    	opacity:1;
+    	
+    }
+  100% { 
+        -webkit-transform-origin: center center; 
+        -webkit-transform: scaleX(0) scaleY(0)  rotate(20deg);
+        opacity:0;
+        -webkit-filter: blur(30px);
+        
+        
+    }
+}

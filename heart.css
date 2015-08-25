@@ -1,0 +1,18 @@
+.heart-animation{
+	height: 70%;
+	width: 70%;
+}
+
+/*.heartcontainer{
+	width:500px;
+	height: 500px;
+}*/
+
+.heartcontainer:hover{
+    -webkit-transform: rotate(70deg);
+    -moz-transform: rotate(70deg);
+    -o-transform: rotate(70deg);
+    -ms-transform: rotate(70deg);
+    transform: rotate(70deg);
+    transition: 3s ease-in;
+}
