@@ -1,0 +1,298 @@
+*{
+      font-family: "brandon-grotesque", Verdana;
+}
+
+
+
+.main-bg{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -99999;
+}
+
+
+
+.scene {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    animation-iteration-count: 1;
+    animation-fill-mode:forwards;
+    -webkit-animation-delay: 0.5s;
+}
+
+.current-scene {
+    z-index: 99999;
+}
+
+.scene-content-container {
+    color: white;
+    position: relative;
+    font-size: 1em;
+    width: 100%;
+    height: 100%;
+     background-image: url('img/CC_bg_0003_plaid orange.jpg'); 
+}
+
+.scene-content{
+  overflow: hidden;
+}
+
+.scene-3 {
+    
+    position: relative;
+  
+    width: 100%;
+    height: 100%;
+     background-image: url('img/CC_bg_0021_royal.jpg'); 
+
+}
+
+.scene-2 {
+    
+    position: relative;
+   
+    width: 100%;
+    height: 100%;
+     background-image: url('img/CC_bg_0015_sketches teal.jpg'); 
+}
+
+.scene-1 {
+  
+    position: absolute;
+    width: 100%;
+    height: 100%;
+     background-image: url('img/bg_Warmgrad01.png'); 
+}
+
+.scene-4 {
+  
+    position: absolute;
+    width: 100%;
+    height: 100%;
+     background-image: url('img/txt_gridCool.jpg'); 
+}
+
+.scene-5 {
+  
+    position: absolute;
+    width: 100%;
+    height: 100%;
+     background-image: url('img/CC_bg_0014_coffee yellow.jpg'); 
+}
+.scene-content {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+.transition-layer {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    font-size: 3em;
+    color: white;
+    z-index: 0;
+    animation-iteration-count: 1;
+    transition-timing-function: cubic-bezier(0.42,0,0.58,1);
+    animation-fill-mode:forwards;
+}
+
+
+
+
+/*create your animations, that can be applied to any class or ID. You will set exact timings later*/
+
+@-webkit-keyframes position_slideIn {
+  
+  0% { 
+        margin-left: 600px;
+
+    }
+  100% { 
+    margin-left: 0px;
+    }
+    
+}
+
+@-webkit-keyframes position_typeUp {
+  
+  0% { 
+        margin-top: 200px;
+
+    }
+  100% { 
+    margin-top: 40px;
+    }
+    
+}
+
+@-webkit-keyframes position_keyframes {
+  
+  0% { 
+        margin-top: 0px;
+
+    }
+  100% { 
+    margin-top: 70%;
+    }
+    
+}
+
+@-webkit-keyframes rotation_keyframes {
+  0% { 
+        -webkit-transform-origin: center center; 
+        -webkit-transform: rotate(0deg) scaleX(1) scaleY(1);
+
+    }
+  100% { 
+        -webkit-transform-origin: center center; 
+        -webkit-transform: rotate(260deg) scaleX(0) scaleY(0);
+    }
+    
+}
+
+@-webkit-keyframes scale_keyframes {
+  0% { 
+        -webkit-transform-origin: center center; 
+        -webkit-transform: scaleX(1) scaleY(1);
+        color: white;
+
+    }
+  100% { 
+        -webkit-transform-origin: center center; 
+        -webkit-transform: scaleX(0) scaleY(0);
+        color: red;
+    }
+}
+
+/*make up a new class, assign the animations to that class, and choose duration of the animation, and ease. and delay*/
+
+.scale-animation {
+    -webkit-animation-name: scale_keyframes;
+  /*  -webkit-animation-duration: 2s;*/
+  -webkit-animation: rotation 2s infinite steps(6);
+ /*    transition-timing-function: ease-out;*/
+}
+
+.rotation-animation {
+    -webkit-animation-name: rotation_keyframes;
+    -webkit-animation-duration: 2s;
+    transition-timing-function: ease-in-out;
+}
+
+.position-animation {
+    -webkit-animation-name: position_keyframes;
+    -webkit-animation-duration: 2s;
+    transition-timing-function: ease-out;
+}
+
+.change-scene.slideIn {
+  -webkit-animation-name: position_slideIn;
+    -webkit-animation-duration: 1s;
+    transition-timing-function: ease-out;
+     animation-iteration-count: 1;
+ 
+    -webkit-animation-delay: 1.0s;
+
+}
+
+
+.type-scene-header{
+    position: relative;
+    width: 100%;
+    /*height: 800px;*/
+    top: 0;
+    left: 0;
+    animation-iteration-count: 1;
+    animation-fill-mode:forwards;
+    -webkit-animation-delay: 0.0s;
+        -webkit-animation-name: position_typeUp; /*tell computer which animation to assign to this class*/
+       -webkit-animation-duration: 1.0s;
+    transition-timing-function: ease-in;
+
+}
+
+
+.transition-layer--large {   
+     -webkit-animation-delay: 0.3s; 
+   /* background-color: red;*/
+    background-image: url('img/CC_bg_0000_plaid spin pink.jpg');
+    -webkit-box-shadow: 1px 1px 2px 0px rgba(50, 50, 50, 0.97);
+-moz-box-shadow:    1px 1px 2px 0px rgba(50, 50, 50, 0.97);
+box-shadow:         1px 1px 2px 0px rgba(50, 50, 50, 0.97);
+}
+.transition-layer--medlrg {   
+     -webkit-animation-delay: 0.2s; 
+   /* background-color: blue;*/
+    background-image: url('img/CC_bg_0012_coffee gradient.jpg');
+  -webkit-box-shadow: 1px 1px 2px 0px rgba(50, 50, 50, 0.97);
+-moz-box-shadow:    1px 1px 2px 0px rgba(50, 50, 50, 0.97);
+box-shadow:         1px 1px 2px 0px rgba(50, 50, 50, 0.97);
+}
+
+.transition-layer--medium {   
+     -webkit-animation-delay: 0.1s; 
+   /* background-color: blue;*/
+    background-image: url('img/CC_bg_0006_spin teal.jpg');
+    -webkit-box-shadow: 1px 1px 2px 0px rgba(50, 50, 50, 0.97);
+-moz-box-shadow:    1px 1px 2px 0px rgba(50, 50, 50, 0.97);
+box-shadow:         1px 1px 2px 0px rgba(50, 50, 50, 0.97);
+}
+
+.transition-layer--small {   
+     -webkit-animation-delay: 0s; 
+    background-color: green;
+    background-image: url('img/CC_bg_0009_walk polkadots.jpg');
+    -webkit-box-shadow: 1px 1px 2px 0px rgba(50, 50, 50, 0.97);
+-moz-box-shadow:    1px 1px 2px 0px rgba(50, 50, 50, 0.97);
+box-shadow:         1px 1px 2px 0px rgba(50, 50, 50, 0.97);
+}
+
+
+
+
+.change-scene-btn {
+  background-image: url('img/button_02.gif');
+  width: 150px;
+  height: 30px;
+  font-size: 0.5em;
+  /*float: right;*/
+   BOTTOM: -4px;
+ left: 90%;
+  border : 4px solid white;
+  border-radius : 2px;
+  text-align: center;
+ position: absolute;
+  cursor : pointer;
+  transform-origin: center center;
+}
+
+
+.hidden {
+    display: none;
+    pointer-events: none;
+    height: 0;
+    width: 0;
+}
+
+
+
+.animation-img {
+  display: inline-block;
+  margin-left: -100px;
+}
+
+.animation-img:first-child {
+  margin-left: 0px;
+}
+
+
