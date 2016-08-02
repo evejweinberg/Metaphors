@@ -1,5 +1,5 @@
 .box{
-	 background-image: url('../img/button_02.gif');
+	 background-image: url('img/button_02.gif');
 	 width: 50px;
 	 height: 50px;
 	 position: absolute;
@@ -10,7 +10,7 @@
 }
 
 .box-btn{
-	 background-image: url('../img/button_02.gif');
+	 background-image: url('img/button_02.gif');
 	 width: 50px;
 	 height: 50px;
 	 position: absolute;
