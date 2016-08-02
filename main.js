@@ -18,7 +18,7 @@ $('.scene').each(function(_index, _el) {
     })
 
     $('.add-more', item).on('click', function(_e) {
-        $('.image-container', $(this).parent()).append('<img class="animation-img" src="img/swimmer.gif" alt=""/>');
+        $('.image-container', $(this).parent()).append('<img class="animation-img" src="http://itpblog.evejweinberg.com/Homework/img/swimmer.gif" alt=""/>');
     })
 
 });
